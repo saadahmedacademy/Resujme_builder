@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Saad Resume Builder</title>
+  </head>
+  <link rel="stylesheet" href="style.css" />
+  <body>
+    <header>
+      <h1>Saad Resume Builder</h1>
+  </header>
+    
+    <div class="container">
+
+      <section id="personalInfo">
+        <h1>
+          Personal <br />
+          Information
+        </h1>
+        <div class="inputSection">
+          <label for="name">Name:</label>
+          <input
+            type="text"
+            id="candidateName"
+            name="name"
+            placeholder="Enter Your name"
+          />
+        </div>
+
+        <div class="inputSection">
+          <label for="contactDetail">Contact Details:</label>
+          <textarea name="contactDetail" id="contactDetail" placeholder="Enter Your Contact Details"></textarea>
+        </div>
+
+        <div style="margin-left: 1.5rem;">
+          <label for="image">Profile Picture:</label>
+          <input onchange="imageTracker(event)" type="file" id="image" name="image" />
+        </div>
+
+        <button onclick="nextButton(1)" style="background-color: rgb(16, 16, 247);" id="inputButton">Next</button>
+      </section>
+
+      <section id="Education" class="hidden" >
+        <h1>Education</h1>
+        <div class="inputSection">
+          <label for="school">Institution Name:</label>
+          <input
+            type="text"
+            id="institute"
+            name="school"
+            placeholder="Enter Your Institute Name"
+          />
+        </div>
+
+        <div class="inputSection">
+          <label for="degree">Degree:</label>
+          <input
+            type="text"
+            id="degree"
+            name="degree"
+            placeholder="Enter Your Degree"
+          />
+        </div>
+        <div class="inputSection">
+          <label for="start">Grade:</label>
+          <input
+            type="text"
+            id="grade"
+            name="grade"
+            placeholder="Enter Your Acheived Grade"
+          />
+        </div>
+        <div class="twoButton">
+          <button onclick="skipButton(1)" style="background-color: red;" id="inputButton">Skip</button>
+          <button onclick="nextButton(2)" style="background-color: rgb(16, 16, 247);" id="inputButton">Next</button>
+          </div>
+      </section>
+
+      <section  id="workExperience"  class="hidden" >
+        <h1>
+          Work <br />
+          Experience
+        </h1>
+        <div class="inputSection">
+          <label for="companyName">Company Name:</label>
+          <input
+            type="text"
+            id="companyName"
+            name="company"
+            placeholder="Enter Your company name"
+          />
+        </div>
+        <div class="inputSection">
+          <label for="jobTitle">Job Title:</label>
+          <input
+            type="text"
+            id="jobTitle"
+            name="jobTitle"
+            placeholder="Enter Your Job Title"
+          />
+        </div>
+        <div class="inputSection">
+          <label for="experience">Experience Years:</label>
+          <input
+            type="text"
+            id="experience"
+            name="experience"
+            placeholder="Enter Your Experience Years"
+          />
+        </div>          
+        <div class="twoButton">
+        <button onclick="skipButton(2)" style="background-color: red;" id="inputButton">Skip</button>
+        <button  onclick="nextButton(3)" style="background-color: rgb(16, 16, 247);" id="inputButton">Next</button>
+        </div>
+      </section>
+
+    </div>
+
+    <p style="position: relative; bottom: 3rem; font-family: sans-serif; text-align: center; border-bottom: 1px solid green;">If You have already a resume<a href="/resume.html" style="text-decoration: none; color: rgb(42, 219, 26);"> Click here</a></p>
+    <script src="script.js" defer></script>
+  </body>
+</html> 
+
